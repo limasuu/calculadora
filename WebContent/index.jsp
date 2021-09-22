@@ -8,17 +8,17 @@
 	
 		<h1>Calculadora</h1>
 		
-		<form>
+		<form action="ServletOperacao" method="post">
 			
 			<input type="text" name="input-valor1" class="valor"/>
 			<label for="input-valor1" class="descricao-valor">Valor 1</label>
 			
 			<br/><br/>
 			
-			<button type="submit" name="botao-adicao" class="botao-operacao">+</button>
-			<button type="submit" name="botao-subtracao" class="botao-operacao">-</button>
-			<button type="submit" name="botao-multiplicacao" class="botao-operacao">*</button>
-			<button type="submit" name="botao-divisao" class="botao-operacao">/</button>
+			<button type="submit" name="botao-operacao" class="botao-operacao" value="adicao">+</button>
+			<button type="submit" name="botao-operacao" class="botao-operacao" value="subtracao">-</button>
+			<button type="submit" name="botao-operacao" class="botao-operacao" value="multiplicacao">*</button>
+			<button type="submit" name="botao-operacao" class="botao-operacao" value="divisao">/</button>
 			
 			<br/><br/>
 			
