@@ -15,10 +15,10 @@
 			
 			<br/><br/>
 			
-			<button type="submit" name="botao-operacao" class="botao-operacao" value="adicao">+</button>
-			<button type="submit" name="botao-operacao" class="botao-operacao" value="subtracao">-</button>
-			<button type="submit" name="botao-operacao" class="botao-operacao" value="multiplicacao">*</button>
-			<button type="submit" name="botao-operacao" class="botao-operacao" value="divisao">/</button>
+			<input type="submit" name="botao-operacao" class="botao-operacao" value="+"/>
+			<input type="submit" name="botao-operacao" class="botao-operacao" value="-"/>
+			<input type="submit" name="botao-operacao" class="botao-operacao" value="*"/>
+			<input type="submit" name="botao-operacao" class="botao-operacao" value="/"/>
 			
 			<br/><br/>
 			

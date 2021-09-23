@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import calculadora.modelo.TipoOperacao;
+
 @WebServlet("/ServletOperacao")
 public class ServletOperacao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,30 +26,12 @@ public class ServletOperacao extends HttpServlet {
 
 		double valor1= Double.parseDouble(request.getParameter("input-valor1"));
 		double valor2= Double.parseDouble(request.getParameter("input-valor2"));
-		String operacao= request.getParameter("botao-operacao");
-		double resultado= 0;
-		String op= "";
+		String operador= request.getParameter("botao-operacao");
+				
+		TipoOperacao operacao= TipoOperacao.getValue(operador);
+		double resultado= operacao.calcula(valor1, valor2);
 
-		switch(operacao) {
-
-		case "adicao":
-			op= "+";
-			resultado= valor1+valor2;
-			break;
-		case "subtracao":
-			op= "-";
-			resultado= valor1-valor2;
-			break;
-		case "multiplicacao":
-			op= "*";
-			resultado= valor1*valor2;
-			break;
-		case "divisao":
-			op= "/";
-			resultado= valor1/valor2;
-			break;		
-		}
-
+		
 		saida.write("<!DOCTYPE html>");
 		saida.write("<html>");	
 		
@@ -59,7 +43,7 @@ public class ServletOperacao extends HttpServlet {
 		saida.write("<body>");		
 		
 		saida.write("<h1>Calculadora</h1>");
-		saida.write("<p>" + valor1 + " " + op + " " + valor2 + "= " + resultado + "</p>");	
+		saida.write("<p>" + valor1 + " " + operador + " " + valor2 + "= " + resultado + "</p>");	
 		
 		saida.write("<a href=\"index.jsp\">Clique aqui para fazer uma nova operacao</a>");	
 		
