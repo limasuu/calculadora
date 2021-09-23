@@ -25,15 +25,6 @@
 			<input type="text" name="input-valor2" class="valor"/>
 			<label for="input-valor2" class="descricao-valor">Valor 2</label>
 			
-			<br/><br/>
-			
-			<input type="text" name="input-resultado" class="valor resultado"/>
-			<label for="input-resultado" class="descricao-valor">Resultado</label>
-			
-			<br/><br/>
-			
-			<button type="reset" name="botao-limpar">Recomeçar</button>
-			
 		</form>
 	</body>
 </html>

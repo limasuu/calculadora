@@ -49,9 +49,20 @@ public class ServletOperacao extends HttpServlet {
 		}
 
 		saida.write("<!DOCTYPE html>");
-		saida.write("<html>");		
+		saida.write("<html>");	
+		
+		saida.write("<head>");
+		saida.write("<meta charset=\"UTF-8\">");	
+		saida.write("<title>Calculadora</title>");	
+		saida.write("</head>");			
+		
 		saida.write("<body>");		
-		saida.write(valor1 + " " + op + " " + valor2 + "= " + resultado);
+		
+		saida.write("<h1>Calculadora</h1>");
+		saida.write("<p>" + valor1 + " " + op + " " + valor2 + "= " + resultado + "</p>");	
+		
+		saida.write("<a href=\"index.jsp\">Clique aqui para fazer uma nova operacao</a>");	
+		
 		saida.write("</body>");
 		saida.write("</html>");
 
